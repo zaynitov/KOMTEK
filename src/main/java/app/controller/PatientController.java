@@ -45,12 +45,7 @@ public class PatientController {
 
     @RequestMapping(value = "/addPatient", method = RequestMethod.GET, headers = "Accept=application/json")
     public String addPatient(@ModelAttribute("patient") Patient patient) {
-
-        if (patientService.getPatient(patient.getSNILS()) == null) {
             patientService.addPatient(patient);
-        } else {
-            patientService.updatePatient(patient);
-        }
         return "redirect:/getAllPatients";
     }
 
@@ -58,7 +53,9 @@ public class PatientController {
     public String updatePatient(@PathVariable("id") int id, Model model) {
         model.addAttribute("patient", this.patientService.getPatient(id));
         model.addAttribute("listOfPatients", this.patientService.getAllPatients());
+        patientService.deletePatient(id);
         return "customerDetails";
+
     }
 
     @RequestMapping(value = "/deletePatient/{id}", method = RequestMethod.GET, headers = "Accept=application/json")

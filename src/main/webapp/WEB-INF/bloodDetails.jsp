@@ -61,7 +61,7 @@
         <tr>
 
             <form:hidden path="id"/>
-            <td><form:label path="measuredate">measuredate:</form:label></td>
+            <td><form:label path="measuredate">measuredate(yyyy-MM-dd):</form:label></td>
             <td><form:input path="measuredate" size="30" maxlength="30"></form:input></td>
         </tr>
         <tr>
@@ -96,7 +96,7 @@
 <c:if test="${!empty listOfBloods}">
     <table class="tg">
         <tr>
-            <th width="120">measuredate</th>
+            <th width="120">measuredate(yyyy-MM-dd)</th>
             <th width="120">hemoglobin</th>
             <th width="120">redbloodcell</th>
             <th width="120">avgrbc</th>

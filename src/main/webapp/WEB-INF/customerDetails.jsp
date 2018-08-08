@@ -66,7 +66,7 @@
 
 
       <tr>
-            <td><form:label path="birth">Birth:</form:label></td>
+            <td><form:label path="birth">Birth(yyyy-MM-dd):</form:label></td>
 
             <td><form:input path="birth" size="30" maxlength="30"></form:input></td>
         </tr>
@@ -86,7 +86,7 @@
             <th width="120">PatientName</th>
             <th width="120">PatientSurmame</th>
             <th width="120">Patronymic</th>
-            <th width="120">Birth</th>
+            <th width="120">Birth(yyyy-MM-dd)</th>
             <th width="60">Edit</th>
             <th width="60">Delete</th>
             <th width="60">Blood</th>

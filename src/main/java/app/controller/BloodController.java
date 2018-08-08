@@ -56,6 +56,7 @@ public class BloodController {
         model.addAttribute("blood", this.bloodService.getBlood(id));
         Set<Blood> blood = bloodService.getBlood(id).getPatient().getBlood();
         model.addAttribute("listOfBloods", blood);
+        bloodService.deleteBlood(id);
         return "bloodDetails";
     }
 
